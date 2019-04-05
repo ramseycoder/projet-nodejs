@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>EasyFood</title>
+  <!-- Font Awesome -->
+   <link href="../public/bootstrap/css/font-awesome.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="../public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="../public/bootstrap/css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="../public/bootstrap/css/users.css" rel="stylesheet">
+   <script type="text/javascript" src="../public/bootstrap/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+  <!-- en tête connexion et inscriptione-->
+  <div class="wrapper row0">
+  <div id="topbar" class="hoc clear">
+    <div class="fl_left">
+      <ul>
+        <li><i class="fa fa-phone"></i> +225 {{user.contacts}}</li>
+        <li><i class="fa fa-envelope"></i> {{user.email}}</li>
+      </ul>
+    </div>
+    <div class="fl_right">
+      <ul>
+        <li class="dropdown"><a href="#" data-toggle="dropdown" class="name"><img src="../public/images/new.png" width="35px" height="35px" class="img-circle img-responsive" style="border: 1px solid darkgrey"> {{user.nom}} {{user.prenoms}}  <span class="fa fa-sort-down"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">modifier mon profil</a></li>
+            <li><a href="deconnexion">déconnexion</a></li>
+            </ul>
+          </li>
+      </ul>
+    </div>
+  </div>
+</div>
+ <!--fin -->
+  <!-- barre de navigation -->
+    <div class="navbar navbar-dark">
+      <div class="navbar-header">
+          <a href="/" class="navbar-brand"><span>E</span>asy<span>F</span>ood</a>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+        </button>
+      </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a herf="" class="nav-item nav-link">Bonnes pratiques</a></li>
+            <li><a href="advice_and_sport" class="nav-link">conseils et sport</a></li>
+            <li><a href="byourself" class="nav-link">faites le vous mêmes</a></li>
+          </ul>
+        </div>
+   </div>
+   <!-- fin -->
+    <!-- débout de la page -->
+    <div id="index" class="container">
+        <h5>Bienvenue sur votre page bonnes pratiques,ici retrouver les diférents publicatons des utilisateurs utile pour avoir une bonne alimentation</h5>
+        <button type="button" class="btn btn-primary" data-target="#publication" data-toggle="modal">faire une publication</button>
+        <div class="big_content">
+            {% for element in info.practizePublications %}
+                <div class="publication_block">
+                    <div class="entête">
+                        <h3><img src="../public/images/new.png" width="75px" height="75px" class="img-circle img-responsive" style="border: 1px solid darkgrey"><p>{{element.nom}} {{element.prenoms}}</p></h3>
+                        <p class="email">{{element.email}}</p>
+                    </div>
+                    <div class="body">
+                        <h4>{{element.objet}}</h4>
+                        <p>{{element.message}}</p>
+                        <p class="info">publié le {{element.date_de_publication}} </p>
+                    </div>
+                    <div class="bouttons type1">
+                        {% if element.email == user.email %}
+                          <ul>
+                            <li><button class="btn btn-default" onclick="showbutton(this);" ><span class="fa fa-comments-o"></span> commentaires</button></li>
+                            <li>
+                                    <input type="hidden" id="nObjet" value="{{element.objet}}">
+                                    <input type="hidden" id="nMessage" value="{{element.message}}">
+                                     <button data-toggle="modal" data-target="#modif_pub" class="btn btn-warning"><span class="fa fa-edit"></span> modifier</button>
+                              </li>
+                            <li><form method="post" action="/users">
+                                    <input type="hidden" name="id" value="{{element.id_pub}}">
+                                    <input type="hidden" name="id_user" value="{{user.id}}">
+                                    <input type="hidden" name="typeForm" value="deletepub">
+                                    <button type="submit" class="btn btn-danger"><span class="fa fa-trash"></span> supprimer</button>
+                                </form></li>
+                          </ul>
+                        {% else %}
+                            <ul>
+                                <li>
+                                     <button class="btn btn-default" onclick="showbutton();"><span class="fa fa-comments-o"></span> commentaires</button>
+                                </li>
+                            </ul>
+                        {% endif %}
+                    </div>
+                     <div class="bouttons type2">
+                        {% if element.email == user.email %}
+                          <ul>
+                            <li><button class="btn btn-default" onclick="showbutton();" ><span class="fa fa-comments-o"></span></button></li>
+                            <li>
+                                    <input type="hidden" id="nObjet" value="{{element.objet}}">
+                                    <input type="hidden" id="nMessage" value="{{element.message}}">
+                                     <button data-toggle="modal" data-target="#modif_pub" class="btn btn-warning"><span class="fa fa-edit"></span></button>
+                              </li>
+                            <li><form method="post" action="/users">
+                                    <input type="hidden" name="id" value="{{element.id_pub}}">
+                                    <input type="hidden" name="id_user" value="{{user.id}}">
+                                    <input type="hidden" name="typeForm" value="deletepub">
+                                    <button type="submit" class="btn btn-danger"><span class="fa fa-trash"></span></button>
+                                </form></li>
+                          </ul>
+                        {% else %}
+                            <ul>
+                                <li>
+                                     <button class="btn btn-default" onclick="showbutton();"><span class="fa fa-comments-o"></span> commentaires</button>
+                                </li>
+                            </ul>
+                        {% endif %}
+                    </div>
+                    <div class="commentaires_block">
+                        <form method="post" class="form-inline"> <input type="hidden" name="name" value="{{user.nom}} {{user.prenoms}}"><input type="hidden" name="id_publication" value="{{element.id_pub}}"><input type="hidden" name="typeForm" value="commentaire"><textarea class="form-control" placeholder="entrez votre commentaire" required name="commentaire"></textarea><input type="submit" value="ajouter commentaire"></form><br>
+                        {% for commentaire in info.commentairesPractize %}
+                            {% if commentaire.id_publication == element.id_pub %}
+                                <h3>{{commentaire.name}}</h3><p>{{commentaire.commentaire}}</p>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- fin -->
+   <!--- footer -->
+   <div class="footer_contain">
+   <footer id="footer" class="container">
+       <!--premiere partie -->
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <h6 class="heading1"><span>E</span>asyFood</h6>
+      <nav>
+        <ul class="nospace">
+          <li><a href="#"><i class="fa fa-lg fa-home"></i></a></li>
+          <li><a href="#">A propos</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Termes</a></li>
+          <li><a href="#">Privé</a></li>
+          <li><a href="#">Cookies</a></li>
+          <li><a href="#">boutique en ligne</a></li>
+          <li><a href="#">carte du site</a></li>
+        </ul>
+      </nav>
+      <ul class="faico clear">
+        <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
+        <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+        <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
+      </ul>
+    </div>
+    <!-- deuxième partie -->
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+      <h6 class="heading">Location</h6>
+      <ul class="nospace linklist contact">
+        <li><i class="fa fa-map-marker"></i>
+          <address>
+          cocody angré, Abidjan
+          </address>
+        </li>
+        <li><i class="fa fa-phone"></i> +225 671 635 47/+225</li>
+        <li><i class="fa fa-envelope-o"></i> info@agromarket.com</li>
+      </ul>
+    </div>
+    <!-- troisième partie -->
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+      <h6 class="heading">Nos nouvelles</h6>
+      <form method="post" action="#">
+        <fieldset>
+          <legend>Newsletter:</legend>
+          <input class="btmspace-15" type="text" value="" placeholder="Name">
+          <input class="btmspace-15" type="text" value="" placeholder="Email">
+          <button type="submit" value="submit">Envoyer</button>
+        </fieldset>
+      </form>
+    </div>
+  </footer>
+    </div>
+    {% if success %}
+        <div class="alert alert-success" id="alert" style="position: fixed;top: 10%;z-index: 35554;right:0;width: 250px;margin-right: -270px">
+            <p style="color:green;font-size:1.3em">publiée avec succès</p>
+        </div>
+        <script>
+            $(function(){
+                $('#alert').animate({marginRight: "+=290"},500).delay(800).animate({marginRight: "-=290"},300);
+            });
+        </script>
+        {success = false}
+    {% endif %}
+    {% if supp %}
+        <div class="alert alert-danger" id="alert" style="position: fixed;top: 10%;z-index: 35554;right:0;width: 250px;margin-right: -270px">
+            <p style="color:darkred;font-size:1.3em">supprimer avec succès</p>
+        </div>
+        <script>
+            $(function(){
+                $('#alert').animate({marginRight: "+=290"},400).delay(800).animate({marginRight: "-=290"},300);
+            });
+        </script>
+        {supp = false}
+    {% endif %}
+    <div class="modal fade" id="publication">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3><span class="fa fa-list"></span>faire une publication</h3>
+                </div>
+                <div class="modal-body">
+                    <form method="post" enctype="multipart/form-data">
+                        <input type="text" name="objet" placeholder="entrez le sujet de votre publication" required class="form-control md-form">
+                        <textarea name="message" class="form-control md-form" placeholder="Entrez votre message ici" rows="7" cols="7" required></textarea>
+                        <input type="hidden" name="id_user" value="{{user.id}}">
+                        <input type="hidden" name="typeForm" value="publication">
+                        <input type="file" name="fichier" multiple />
+                        <input type="submit" value="publier">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="modif_pub">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3><span class="fa fa-list"></span>modifier une publication</h3>
+                </div>
+                <div class="modal-body">
+                    <form method="post">
+                        <input type="text" name="objet" id="objet" class="form-control md-form">
+                        <textarea name="message" class="form-control md-form"  rows="7" cols="7" required id="message"></textarea>
+                        <input type="hidden" name="id_user" value="{{user.id}}">
+                        <input type="hidden" name="typeForm" value="modif_pub">
+                        <input type="submit" value="modifier">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fin footer -->
+  <!-- SCRIPTS -->
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="../public/bootstrap/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="../public/bootstrap/js/mdb.min.js"></script>
+  <script src="../public/bootstrap/js/animate.js"></script>
+  <script>
+        function showbutton(){
+             $('#index .big_content .commentaires_block').fadeToggle();
+        }
+    $(function(){
+        let getObjet = $('#nObjet').val(),getMessage = $('#nMessage').val()
+        $('#objet').val(getObjet);
+        $('#message').val(getMessage);
+    });
+    </script>
+</body>
+
+</html>

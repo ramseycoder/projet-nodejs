@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>EasyFood</title>
+  <!-- Font Awesome -->
+   <link href="../public/bootstrap/css/font-awesome.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="../public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material D
+  	esign Bootstrap -->
+  <link href="../public/bootstrap/css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="../public/bootstrap/css/style.css" rel="stylesheet">
+  <script type="text/javascript" src="../public/bootstrap/js/jquery-3.3.1.min.js"></script>
+</head>
+<body style="background-image: url('../public/images/img%20(6)a.jpg');background-attachment: scroll;background-size: cover">
+
+  <!-- en tête connexion et inscriptione-->
+  <div class="wrapper row0">
+  <div id="topbar" class="hoc clear">
+    <div class="fl_left">
+      <ul>
+        <li><i class="fa fa-phone"></i> +225 671 635 47</li>
+        <li><i class="fa fa-envelope-o"></i> info@easyfood.com</li>
+      </ul>
+    </div>
+    <div class="fl_right">
+      <ul>
+        <li><a href="/"><i class="fa fa-lg fa-home"></i></a></li>
+        <li><a href="#" class="active">Connexion</a></li>
+        <li><a href="inscription" class="btn btn-success">Inscription</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+ <!--fin -->
+  <!-- contenu de la page connexion -->
+    <div id="inscription" class="container-fluid">
+           <h1>Connectez-vous</h1>
+            <span style="color: red">
+            {% for error in errors %}
+                {{ error.msg }}
+            {% endfor %}
+            </span>
+           <div class="table-inscription container">
+              <div class="row">
+                  <div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6 col-sm-offset-1 col-sm-10 col-xs-12">
+                      <form method="post" action="#" id="formgrossiste">
+                            <input type="email" class="form-control" name="email" placeholder="entrez votre email "/>
+                            <input type="password" class="form-control" name="password" placeholder="entrez votre mot de pase "/>
+                            <input type="hidden" name="typeUser" value="grossiste" />
+                            <input type="submit" name="connexion_grossiste" value="connexion">
+                        </form>
+                  </div>
+              </div>
+           </div>
+    </div>
+   <!-- fin -->
+   <!--- footer -->
+   <div class="footer_contain">
+   <footer id="footer" class="container">
+       <!--premiere partie -->
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <h6 class="heading1"><span>E</span>asyFood</h6>
+      <nav>
+        <ul class="nospace">
+          <li><a href="#"><i class="fa fa-lg fa-home"></i></a></li>
+          <li><a href="#">A propos</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Termes</a></li>
+          <li><a href="#">Privé</a></li>
+          <li><a href="#">Cookies</a></li>
+          <li><a href="#">boutique en ligne</a></li>
+          <li><a href="#">carte du site</a></li>
+        </ul>
+      </nav>
+      <ul class="faico clear">
+        <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
+        <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+        <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
+      </ul>
+    </div>
+    <!-- deuxième partie -->
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+      <h6 class="heading">Location</h6>
+      <ul class="nospace linklist contact">
+        <li><i class="fa fa-map-marker"></i>
+          <address>
+          cocody angré, Abidjan
+          </address>
+        </li>
+        <li><i class="fa fa-phone"></i> +225 671 635 47/+225</li>
+        <li><i class="fa fa-envelope-o"></i> info@agromarket.com</li>
+      </ul>
+    </div>
+    <!-- troisième partie -->
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+      <h6 class="heading">Nos nouvelles</h6>
+      <form method="post" action="#">
+        <fieldset>
+          <legend>Newsletter:</legend>
+          <input class="btmspace-15" type="text" value="" placeholder="Name">
+          <input class="btmspace-15" type="text" value="" placeholder="Email">
+          <button type="submit" value="submit">Envoyer</button>
+        </fieldset>
+      </form>
+    </div>
+  </footer>
+</div>
+{% if faux %}
+    <div class="modal fade" id="error">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3><span class="fa fa-exclamation-circle"></span> Erreur</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Vous n'êtes pas inscrit sur notre plateforme.<br>veuillez vous inscrire svp</p><br>
+                    <button type="button" class="btn btn-danger">j'ai oublié mon mot de passe</button>
+                    <a href="inscription" class="btn btn-success">je m'inscrire</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('#error').modal('show');
+        });
+    </script>
+    {faux = false}
+{% endif %}
+    <!-- fin footer -->
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="../public/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../public/bootstrap/js/mdb.min.js"></script>
+  <script src="../public/bootstrap/js/animate.js"></script>
+</body>
+
+</html>

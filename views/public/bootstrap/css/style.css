@@ -1,0 +1,1212 @@
+/* 
+=====================
+en tête de connexion et d'inscription 
+=====================
+*/
+#topbar .fl_left
+{
+    float: left;
+    margin: 0px 25px !important;
+}
+#topbar .fl_right
+{
+    float: right;
+    margin: 0px 25px !important;
+}
+#topbar .fl_right ul li a
+{
+    font-size: 1em;
+    text-transform: lowercase;
+    padding: 7px;
+}
+#topbar .fl_right ul li a.btn-default
+{
+    text-transform: lowercase;
+    background: none;
+    border: 1px solid darkgrey;
+    color: darkgrey;
+    background: none !important;
+    border-radius: 50px;
+}
+#topbar .fl_right ul li a.btn-success
+{
+    text-transform: lowercase;
+    background: none;
+    border: 1px solid goldenrod;
+    color: goldenrod;
+    background: none !important;
+    border-radius: 50px;
+}
+#topbar .fl_right ul li a.active
+{
+    text-transform: lowercase;
+    background: none;
+    border: 1px solid aliceblue;
+    color: darkred;
+    background: none !important;
+    border-radius: 50px;
+}
+#topbar{
+    padding:50px 0; 
+   margin-top: -30px;
+    font-size:1.6rem;
+    background: white;
+}
+
+#topbar *{
+    margin:0; 
+    padding:0; 
+    list-style:none;
+}
+#topbar ul li{
+    display:inline-block; 
+    margin-right:10px; 
+    padding-right:15px; 
+    border-right:1px solid;
+}
+#topbar ul li:last-child{
+    margin-right:0; padding-right:0; border-right:none;
+}
+#topbar i{
+    margin:0 5px 0 0;
+    line-height:normal;
+    color: orangered;
+}
+#topbar ul li{border-color:rgba(0,0,0,.1);}
+#topbar > div:last-of-type li:first-child a{color:#D64E3F;}
+
+
+/* 
+=====================
+barre de navigation 
+=====================
+*/
+.navbar
+{
+    height: 70px;
+    padding: 10px 15px;
+    text-align: center;
+}
+.navbar .navbar-header a
+{
+    color: darkgrey;
+    font-family: Agency FB;
+    font-weight: bolder;
+    font-size: 2em !important;
+}
+.navbar .navbar-header a span
+{
+    color: orangered;
+}
+.navbar .navbar-nav
+{
+    margin-left: 250px;
+}
+.navbar .navbar-nav li a
+{
+    font-size:20px;
+    color: black;
+    font-family: Bell MT;
+    font-weight: bolder;
+    width: 130px;
+}
+.navbar .navbar-nav li.active a
+{
+    border-bottom: 2px solid orangered;
+}
+.navbar .navbar-nav li.active a:hover
+{
+    border-bottom: 2px solid orangered;
+}
+.navbar .navbar-nav li a:hover
+{
+    background: ghostwhite;
+    border-bottom: 2px solid orangered;
+}
+
+/* page d'acceuil
+--------------------------------------------------------------------------------------------------------------- */
+#index .banner
+{
+    animation: bannerimage 5s 0s ease-in infinite alternate;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 500px;
+}
+@keyframes bannerimage{
+    0%{background-image: url('../../images/tn_img%20(1).jpg');}
+    20%{background-image: url('../../images/tn_img%20(11).jpg');}
+    40%{background-image: url('../../images/tn_img%20(2).jpg');}
+    60%{background-image: url('../../images/tn_img%20(3).jpg');}
+    80%{background-image: url('../../images/tn_img%20(8).jpg');}
+    100%{background-image: url('../../images/tn_gombo.jpg');}
+}
+#index #mycarousel
+{
+    text-align: center;
+    margin: 0px auto;
+    padding-top: 150px;
+}
+#index #mycarousel .carousel-page
+{
+    width: 700px;
+    text-align: left;
+    margin-left: 30px;
+}
+#index #mycarousel .carousel-page h1
+{
+    color: orangered;
+    font-family: cursive;
+    font-weight: bolder;
+    font-size: 3.7em;
+    margin-bottom: 25px;
+}
+#index #mycarousel .carousel-page p
+{
+    color: white;
+    font-size: 1.5em;
+}
+#index #mycarousel .carousel-page p a
+{
+    margin-top: 25px;
+}
+#index #mycarouel .carousel-indicators
+{
+    display: none !important;
+}
+#index section.welcome h1
+{
+    font-size: 3em;
+    padding-bottom: 5px;
+    border-bottom: 2px solid orangered;
+    margin-left: 100px;
+    width: 50%;
+}
+#index section.welcome h1 span
+{
+    color: orangered;
+    font-weight:bolder;
+}
+#index section.welcome p
+{
+    font-size: 1.3em;
+    margin: 30px;
+    text-align: justify;
+}
+#index section.temoignages h1
+{
+    font-size: 3em;
+    padding-bottom: 5px;
+    border-bottom: 2px solid orangered;
+    margin-left: 100px;
+    width: 50%;
+}
+#index section.temoignages h1 span
+{
+    color: orangered;
+    font-weight: bolder;
+}
+#index section.temoignages p.text
+{
+    font-size: 1.3em;
+    margin: 50px;
+}
+#index section.temoignages #testimony
+{
+    background-image:url('../../images/tn_img%20(3).jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 75px 100px
+}
+#index section.temoignages #testimony .carousel-page figcaption
+{
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 1.5em;
+    font-family: Bell MT;
+}
+#index section.temoignages #testimony .carousel-page p
+{
+    border: 1px solid darkgrey;
+    border-radius: 50px;
+    color: white;
+    padding: 25px;
+}
+#index section.services h1
+{
+    font-size: 3em;
+    padding-bottom: 5px;
+    border-bottom: 2px solid orangered;
+    margin-left: 100px;
+    width: 50%;
+}
+#index section.services h1 span
+{
+    font-weight: bolder;
+    color: orangered;
+}
+#index section.services p.text
+{
+    font-size: 1.3em;
+    margin: 50px;
+}
+#index section.services .block_content
+{
+    border: 1px solid darkgrey;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+#index section.services .block_content:hover
+{
+    box-shadow: 1px 1px 130px;
+    margin-top: 10px;
+}
+#index section.services .block_content h3
+{
+    font-weight: bolder;
+    font-family: Bell MT;
+    font-size: 1.9em;
+}
+#index section.services .block_content p
+{
+    font-size: 1.2em;
+    font-family: roman new times;
+}
+#index section.services .block_content  .boutton
+{
+    text-align: right;
+}
+#index section.services .block_content  a
+{
+    display: inline-block;
+    background: none;
+    text-decoration: none;
+    color: black;
+    border: 1px solid orangered;
+    border-radius: 50px;
+    color: orangered;
+    padding: 5px;
+    transition: all 0.25s linear;
+}
+#index section.services .block_content  a:hover
+{
+  background-color: orangered;
+    color: white;
+}
+/* page inscription et page connexion
+--------------------------------------------------------------------------------------------------------------- */
+#inscription h1
+{
+    text-align: center;
+    color: white;   
+    font-family: Bell MT;
+    font-size: 40px;
+    font-weight: bolder;
+    border-bottom: 2px solid orangered;
+    padding-bottom: 20px;
+    margin-left: -2000px;
+}
+#inscription p
+{
+    font-size: 27px;
+    text-align: center;
+    color: ghostwhite;
+    font-family: Papyrus;
+    margin-top: 30px;
+}
+#inscription .table-inscription
+{
+    margin: 20px auto;
+}
+#inscription .table-inscription .nav li a
+{
+    background: none;
+    border: 1px solid white;
+    color: white;
+    font-size: 1.5em;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+}
+#inscription .table-inscription .nav li.active a
+{
+  background: white;
+    color:black;
+}
+#inscription .table-inscription input,#inscription .table-inscription select
+{
+    margin: 10px;
+    background: white;
+    color: black;
+    border-radius: 0;
+    border-radius: 12px;
+    border: 1px solid white;
+    height: 50px;
+}
+#inscription .table-inscription input[type="submit"]
+{
+   background: green;
+    width: 100%;
+    font-size: 1.2em;
+    color: white;
+    border:1px solid green;
+    transition: all 0.25s ease-in;
+}
+#inscription .table-inscription input[type="reset"]
+{
+   background: red;
+    width: 100%;
+    font-size: 1.2em;
+    color: white;
+    border:1px solid red;
+    transition: all 0.25s ease-in;
+}
+#inscription .table-inscription input[type="submit"]:hover
+{
+    background: white;
+    color: green;
+}
+#inscription .table-inscription input[type="reset"]:hover
+{
+  background: white;
+    color: red;
+    
+}
+#inscription .table-inscription input::placeholder
+{
+    color: black;
+}
+
+/* page apropos
+--------------------------------------------------------------------------------------------------------------- */
+#apropos h1
+{
+    text-align: center;
+    font-family: Bell MT;
+    font-size: 40px;
+    border-left: 2px solid orangered;
+    margin-left: -2000px;
+}
+#apropos p.text
+{
+    text-align: justify;
+    font-size: 1.5em;
+    line-height: 35px;
+    display: none
+}
+#apropos p.anim
+{
+    text-align: justify;
+    font-size: 1.5em;
+    line-height: 35px;
+    display: none
+}
+#apropos h3
+{
+    font-weight: bolder;
+    text-align: left;
+    font-size: 40px;
+    font-family: Bell MT;
+    display: none;
+}
+#apropos p.anim .fa-facebook
+{
+    color: white;
+    background-color: midnightblue;
+    padding: 30px;
+    font-size: 30px;
+    margin: 5px;
+    border-radius: 50px;
+}
+#apropos p.anim .fa-youtube
+{
+    color: white;
+    background-color: red;
+    padding: 30px;
+    font-size: 30px;
+    margin: 5px;
+    border-radius: 50px;
+}
+
+/* page contacts
+--------------------------------------------------------------------------------------------------------------- */
+#contacts h1
+{
+    text-align: center;
+    font-family: Bell MT;
+    font-size: 40px;
+    border-left: 2px solid orangered;
+    margin-left: -2000px;
+}
+#contacts p.p
+{
+    font-size: 1.5em;
+    line-height: 35px;
+    margin-top: 50px;
+    text-align: center;
+}
+#contacts .contents .row
+{
+    margin-top: 50px;
+    text-align: left !important;
+}
+#contacts .contents p span
+{
+    font-weight: bolder;
+    font-size: 50px;
+}
+#contacts .google-map
+{
+    border: 1px solid black;
+    height: 250px;
+    width: 100%;
+}
+#contacts .contents p
+{
+    margin: 20px;
+    font-size: 25px;
+}
+#contacts .form input,#contacts .form textarea
+{
+    height: 50px;
+    background: none;
+    border: 1px solid darkgrey;
+    color: black;
+    margin: 7px;
+    border-radius: 0;
+}
+#contacts .form textarea
+{
+    height: 100px;
+    background: none;
+    border: 1px solid darkgrey;
+    color: black;
+    margin: 7px;
+    border-radius: 0;
+}
+#contacts .form button
+{
+    width: 100%;
+}
+#contacts .form button:hover
+{
+    background: none !important;
+    border:1px solid rebeccapurple;
+    color: rebeccapurple;
+}
+
+/* page services
+--------------------------------------------------------------------------------------------------------------- */
+#servies
+{
+    position: absolute;
+    z-index: 1;
+}
+#services h1
+{
+    text-align: center;
+    font-family: Bell MT;
+    font-size: 40px;
+    border-left: 2px solid orangered;
+    margin-left: -2000px;
+}
+#services p
+{
+     font-size: 1.5em;
+    line-height: 35px;
+    margin-top: 50px;
+    text-align: center;
+}
+#services .big_content h2
+{
+    border-bottom: 2px solid orangered;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: Bell MT;
+    font-size: 40px;
+    padding-bottom: 8px;
+    display: none;
+}
+#services .big_content p
+{
+    text-align: left;
+    margin-top: 15px;
+    display: none;
+}
+#services video
+{
+    opacity: 0.05;
+    position: absolute;
+    z-index: 0;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* les modals
+============================================ */
+#success .modal-content
+{
+    background: white;
+    border-radius: 50px;
+    border: 1px solid orangered;
+}
+#success .modal-header
+{
+    border-bottom: none;
+}
+#success .modal-header h3
+{
+    color: orangered;
+}
+#success .modal-body p
+{
+    color: black;
+    margin-top: -20px;
+    font-size: 1.2em;
+}
+#success .modal-body a
+{
+    display: block;
+    font-size: 1.2em;
+    text-transform: lowercase;
+    background: none !important;
+    color: orangered;
+    border-radius: 50px;
+    border:1px solid orangered;
+}
+
+#error .modal-content
+{
+    background: white;
+    border-radius: 50px;
+    border: 1px solid red;
+}
+#error .modal-header
+{
+    border-bottom: none;
+}
+#error .modal-header h3
+{
+    color: red;
+}
+#error .modal-body p
+{
+    color: black;
+    margin-top: -20px;
+    font-size: 1.2em;
+}
+#error .modal-body a
+{
+    font-size: 1.2em;
+    text-transform: lowercase;
+    background: none !important;
+    color: limegreen;
+    border-radius: 50px;
+    border:1px solid limegreen;
+}
+#error .modal-body button
+{
+    font-size: 1.2em;
+    text-transform: lowercase;
+    background: none !important;
+    color: red;
+    border-radius: 50px;
+    border:1px solid red;
+}
+
+/* page 404
+-------------------------------------------------------------------------------------------------------------*/
+#error_p h1
+{
+    font-size: 15em;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-family: Bell MT;
+}
+#error_p h3
+{
+    font-size: 5em;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-family: roman news times;
+}
+#error_p p
+{
+    margin-top: 120px;
+    font-size: 1.8em;
+    text-align: center;
+    color: white;
+}
+#error_p h4
+{
+    color: white;
+    font-size: 2.3em;
+    text-align: center;
+}
+#error_p h4 span
+{
+    color: orangered;
+    font-weight: bolder
+}
+/* Footer
+--------------------------------------------------------------------------------------------------------------- */
+.footer_contain
+{
+    background: black;
+    color: white;
+    margin-top: 50px;
+}
+#footer{
+    padding:50px 0;
+}
+
+#footer .heading{
+    margin-bottom:50px; 
+    font-size:1.5em;}
+#footer .heading1{
+    margin-bottom:50px; 
+       font-family: agency fb;
+    font-size:2.2em;}
+#footer .heading1 span
+{
+    color: orangered;
+    font-weight:bolder;
+    font-size: 1.5em;
+    margin-left: 7px;
+    border: 1px solid white;
+    padding: 7px;
+    margin: 5px;
+}
+#footer form legend
+{
+    color: white;
+}
+#footer nav .nospace li a
+{
+    color: slategrey;
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+#footer nav .nospace li a:hover
+{
+    color: white;
+}
+
+#footer nav{margin-bottom:30px; text-transform:uppercase;}
+#footer nav ul{}
+#footer nav ul li{display:inline-block; margin-right:20px;}
+#footer nav ul li:last-child{margin-right:0;}
+
+#footer .linklist li{display:block; margin-bottom:15px; padding:0 0 15px 0; border-bottom:1px solid;}
+#footer .linklist li:last-child{margin:0; padding:0; border:none;}
+#footer .linklist li::before, #footer .linklist li::after{display:table; content:"";}
+#footer .linklist li, #footer .linklist li::after{clear:both;}
+
+#footer .contact{}
+#footer .contact.linklist li, #footer .contact.linklist li:last-child{position:relative; padding-left:40px;}
+#footer .contact li *{margin:0; padding:0; line-height:1.6;}
+#footer .contact li i{display:block; position:absolute; top:0; left:0; width:30px; font-size:16px; text-align:center;}
+
+#footer input, #footer button{border:1px solid; border-radius:22px;}
+#footer input{display:block; width:100%; padding:8px 15px;margin: 7px;color: black;}
+#footer button{padding:8px 18px 10px; text-transform:uppercase; font-weight:700; cursor:pointer;background: orangered;color:white;border: none}
+/* Font Awesome Social Icons
+--------------------------------------------------------------------------------------------------------------- */
+.faico{margin:0; padding:0; list-style:none;}
+.faico li{display:inline-block; margin:8px 5px 0 0; padding:0; line-height:normal;}
+.faico li:last-child{margin-right:0;}
+.faico a{display:inline-block; width:36px; height:36px; line-height:36px; font-size:18px; text-align:center; border-radius:50%; background-clip:padding-box;}
+
+.faico a{color:inherit; background-color:#141414;}
+.faico a:hover{color:#FFFFFF;}
+
+.faicon-dribble:hover{background-color:#EA4C89;}
+.faicon-facebook:hover{background-color:#3B5998;}
+.faicon-google-plus:hover{background-color:#DB4A39;}
+.faicon-linkedin:hover{background-color:#0E76A8;}
+.faicon-twitter:hover{background-color:#00ACEE;}
+.faicon-vk:hover{background-color:#4E658E;}
+.error_P
+{
+    position: fixed;
+    z-index: 4546546;
+    display: none;
+    top: -200px;
+    margin-top: -250px;
+    left: 30%;
+    padding: 10px;
+    width: 500px;
+}
+
+/* Copyright
+--------------------------------------------------------------------------------------------------------------- */
+#copyright{padding:20px 0;}
+#copyright *{margin:0; padding:0;}
+
+
+
+
+
+
+/* responsivité du site
+===============================================*/
+@media(max-width:1200px)
+{
+    .navbar .navbar-nav
+    {
+        margin-left: 70px;
+    }
+}
+@media(max-width:992px)
+{
+    #index #mycarousel .carousel-page h1
+    {
+        color: orangered;
+        font-family: cursive;
+        font-weight: bolder;
+        font-size: 3.2em;
+        margin-bottom: 25px;
+    }
+    #index #mycarousel .carousel-page p
+    {
+        color: white;
+        font-size: 1.4em;
+    }
+    #index #mycarousel .carousel-page p a
+    {
+        margin-top: 25px;
+    }
+    #index section.services .block_content
+    {
+        margin: 10px;
+    }
+    #index section.temoignages #testimony .carousel-page figcaption
+    {
+        font-size: 1.1em;
+    }
+    .error_P
+    {
+        top: -250px;
+        margin-top: -250px;
+    }
+
+}
+@media(max-width: 916px)
+{
+    .error_P
+    {
+        left: 25%;
+        padding: 10px;
+        width: 400px;
+    }
+}
+@media(max-width: 850px)
+{
+    #index  #mycarousel .carousel-page
+    {
+        width: 500px;
+    }
+    #index #mycarousel .carousel-page h1
+    {
+        color: orangered;
+        font-family: cursive;
+        font-weight: bolder;
+        font-size: 2.8em;
+        margin-bottom: 25px;
+    }
+    #index #mycarousel .carousel-page p
+    {
+        color: white;
+        font-size: 1.3em;
+    }
+    #index #mycarousel .carousel-page p a
+    {
+        margin-top: 25px;
+    }
+    #services h1
+    {
+        font-size: 30px;
+    }
+    #services p
+    {
+        font-size: 1.3em;
+    }
+    #services .big_content h2
+    {
+        font-size: 30px;
+    }
+    #services .big_content p
+    {
+        text-align: left;
+        margin-top: 15px;
+        display: none;
+    }
+    #contacts h1
+    {
+        font-size: 30px;;
+    }
+    #contacts p.p
+    {
+        font-size: 1.3em;
+    }
+    #contacts .contents p span
+    {
+        font-weight: bolder;
+        font-size: 40px;
+    }
+    #contacts .contents p
+    {
+        margin: 20px;
+        font-size: 20px;
+    }
+    #apropos h1
+    {
+        font-size: 25px;
+    }
+    #apropos p.text
+    {
+        font-size: 1.3em;
+    }
+    #apropos p.anim
+    {
+        font-size: 1.3em;
+    }
+    #apropos h3
+    {
+        font-size: 20px;
+    }
+    #apropos p.anim .fa-facebook
+    {
+        font-size: 20px;
+    }
+    #apropos p.anim .fa-youtube
+    {
+        font-size: 20px;
+    }
+}
+@media(max-width: 775px)
+{
+    #topbar .fl_left
+    {
+        float: none;
+        margin: 10px 25px !important;
+    }
+    #topbar .fl_right
+    {
+        float: none;
+        margin: 10px 25px !important;
+    }
+    #topbar
+    {
+        text-align: center;
+    }
+}
+@media(max-width: 768px)
+{
+  .navbar .navbar-nav
+    {
+        background: white;
+        margin-left: -15px;
+        text-align: center;
+    }
+    .navbar .navbar-nav li a
+    {
+        font-size:20px;
+        color: black;
+        font-family: Bell MT;
+        font-weight: bolder;
+        width: 100%;
+    }
+    .navbar .navbar-header button
+    {
+        border:1px solid orangered;
+    }
+    .navbar .navbar-header button .icon-bar
+    {
+        color: blue !important;
+    }
+
+}
+@media(max-width:660px)
+{
+    #index section.temoignages #testimony
+    {
+        padding: 50px 5px
+    }
+    #index section.welcome h1,#index section.temoignages h1,#index section.services h1
+    {
+        font-size: 2.5em;
+        margin-left: 10px;
+    }
+    #index section.welcome p,#index section.temoignages p.text,#index section.services p.text
+    {
+        font-size: 1.2em;
+    }
+    #error_p h1
+    {
+        font-size: 10em;
+    }
+    #error_p h3
+    {
+        font-size: 3em;
+    }
+    #error_p p
+    {
+        font-size: 1.2em;
+    }
+    #error_p h4
+    {
+        font-size: 1.5em;
+    }
+    .error_P
+    {
+        left: 15%;
+        padding: 10px;
+        width: 300px;
+        font-size: 1em;
+    }
+}
+@media(max-width:640px)
+{
+    #index  #mycarousel .carousel-page
+    {
+        width: 400px;
+    }
+    #index #mycarousel .carousel-page h1
+    {
+        color: orangered;
+        font-family: cursive;
+        font-weight: bolder;
+        font-size: 2em;
+        margin-bottom: 25px;
+    }
+    #index #mycarousel .carousel-page p
+    {
+        color: white;
+        font-size: 1.1em;
+    }
+    #index #mycarousel .carousel-page p a
+    {
+        margin-top: 25px;
+    }
+}
+@media(max-width: 592px)
+{
+    #error .modal-header h3
+    {
+        color: red;
+        font-size: 1.5em;
+    }
+    #error .modal-body p
+    {
+        font-size: 1.2em;
+    }
+    #error .modal-body a
+    {
+        font-size: 1.1em;
+    }
+    #error .modal-body button
+    {
+        font-size: 1.1em;
+        width: 200px;
+    }
+    #success .modal-header h3
+    {
+        color: orangered;
+        font-size: 1.5em;
+    }
+    #success .modal-body p
+    {
+        font-size: 1.2em;
+    }
+    #success .modal-body a
+    {
+        font-size: 1.1em;
+    }
+}
+@media(max-width: 490px)
+{
+    #error .modal-header h3
+    {
+        color: red;
+        font-size: 1.2em;
+    }
+    #error .modal-body p
+    {
+        font-size: 1em;
+    }
+    #error .modal-body a
+    {
+        font-size: 0.4em;
+    }
+    #error .modal-body button
+    {
+        font-size: 2px !important;
+        width: 150px;
+    }
+    #success .modal-header h3
+    {
+        color: orangered;
+        font-size: 1.2em;
+    }
+    #success .modal-body p
+    {
+        font-size: 1em;
+    }
+    #success .modal-body a
+    {
+        font-size: 0.4em;
+    }
+}
+@media(max-width: 495px)
+{
+     #inscription h1
+    {
+        font-size: 30px;
+    }
+    #index  #mycarousel .carousel-page
+    {
+        width: 300px;
+    }
+    #index #mycarousel .carousel-page h1
+    {
+        color: orangered;
+        font-family: cursive;
+        font-weight: bolder;
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+}
+@media(max-width:445px)
+{
+    #index section.temoignages #testimony figure
+    {
+        width: 100%;
+    }
+    #index section.temoignages #testimony .blockp
+    {
+        width: 100%;
+    }
+    
+}
+
+@media(max-width:376px)
+{
+    #index #mycarousel
+    {
+        margin-top: 10px;
+    }
+    #index  #mycarousel .carousel-page
+    {
+        width: 200px;
+    }
+    #index #mycarousel .carousel-page h1
+    {
+        color: orangered;
+        font-family: cursive;
+        font-weight: bolder;
+        font-size: 1.5em;
+    }
+     #index section.welcome h1,#index section.temoignages h1,#index section.services h1
+    {
+        font-size: 1.8em;
+        margin-left: 10px;
+    }
+    #index section.welcome p,#index section.temoignages p.text,#index section.services p.text
+    {
+        font-size: 1em;
+        margin-left: 7px;
+    }
+    #index section.services .block_content
+    {
+        padding: 5px;
+    }
+    #index section.services .block_content h3
+    {
+        font-weight: bolder;
+        font-family: Bell MT;
+        font-size: 1.5em;
+    }
+    #index section.services .block_content p
+    {
+        font-size: 1em;
+        font-family: roman new times;
+    }
+    #index section.services .block_content  a
+    {
+        font-size: 0.5em;
+        padding: 3px;
+    }
+    #topbar .fl_right ul li a
+    {
+        font-size: 0.7em;
+        padding: 5px;
+    }
+    #services p
+    {
+        font-size: 1.1em;
+    }
+    #services .big_content h2
+    {
+        font-size: 27px;
+    }
+    #services .big_content p
+    {
+        text-align: left;
+        margin-top: 15px;
+        display: none;
+    }
+    #apropos h1
+    {
+        font-size: 20px;
+    }
+    #apropos p.text
+    {
+        font-size: 1.1em;
+    }
+    #apropos p.anim
+    {
+        font-size: 1.1em;
+    }
+    #apropos h3
+    {
+        font-size: 15x;
+    }
+    #apropos p.anim .fa-facebook
+    {
+        font-size: 15px;
+    }
+    #apropos p.anim .fa-youtube
+    {
+        font-size: 15px;
+    }
+    #inscription h1
+    {
+        font-size: 20px;
+    }
+     .error_P
+    {
+        left: 2%;
+        padding: 10px;
+        width: 250px;
+        font-size: 2px;
+    }
+}
+@media(max-width: 300px)
+{
+    #error_p h1
+    {
+        font-size: 7em;
+    }
+    #error_p h3
+    {
+        font-size: 2em;
+    }
+}

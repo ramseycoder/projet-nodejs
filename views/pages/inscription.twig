@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>EasyFood</title>
+  <!-- Font Awesome -->
+   <link href="../public/bootstrap/css/font-awesome.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="../public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material D
+  	esign Bootstrap -->
+  <link href="../public/bootstrap/css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="../public/bootstrap/css/style.css" rel="stylesheet">
+  <script type="text/javascript" src="../public/bootstrap/js/jquery-3.3.1.min.js"></script>
+</head>
+<body style="background-image: url('../public/images/img (6)a.jpg');background-attachment: scroll;background-size: cover">
+
+  <!-- en tête connexion et inscriptione-->
+  <div class="wrapper row0">
+  <div id="topbar" class="hoc clear">
+    <div class="fl_left">
+      <ul>
+        <li><i class="fa fa-phone"></i> +225 671 635 47</li>
+        <li><i class="fa fa-envelope-o"></i> info@easyfood.com</li>
+      </ul>
+    </div>
+    <div class="fl_right">
+      <ul>
+        <li><a href="/i"><i class="fa fa-lg fa-home"></i></a></li>
+        <li><a href="connexion" class="btn btn-default">Connexion</a></li>
+        <li><a href="#" class="active">Inscription</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+ <!--fin -->
+  <!-- contenu de la page inscription -->
+    <div id="inscription" class="container-fluid">
+           <h1>Inscrivez vous,c'est gratuit</h1>
+           <br><br>
+           <p class="error_P"></p>
+           <div class="table-inscription container">
+              <div class="row">
+                  <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 col-xs-12">
+                       <form method="post" action="#" id="form">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <input type="text" class="md-form md-outline form-control form-sm" name="nom" placeholder="entrez votre nom " required onkeyup="veriformNom(this);" onblur="fermeboite(veriformNom(this));"/>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <input type="text" class="md-form md-outline form-control form-sm" name="prenoms" required placeholder="entrez vos prénoms " onkeyup="veriformPrenoms(this);" onblur="fermeboite(veriformPrenoms(this));"/>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <input type="email" name="email" class="md-form md-outline form-control form-sm" required placeholder="entrez votre email svp" onkeyup="veriformEmail(this);" onblur="fermeboite(veriformEmail(this));"/>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <input type="number" class="md-form md-outline form-control form-sm" name="contacts" required placeholder="entrez vos contacts" onkeyup="veriformNumber(this);" onblur="fermeboite(veriformNumber(this));"/>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <input type="text" class="md-form md-outline form-control form-sm" name="localite" required placeholder="entrez votre localite " id="localiteG" onkeyup="veriformLocaliteG(this);" onblur="fermeboite(veriformLocaliteG(this));"/>
+                                </div>
+                                 <div class="col-lg-6 col-md-6">
+                                    <select name="sexe" class="form-control md-form">
+                                        <option disabled selected>veuillez choisir votre sexe</option>
+                                        <option value="mascuin">masculin</option>
+                                        <option value="féminin">féminin</option>
+                                     </select>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <input type="password" name="password" id="p1G" class="md-form md-outline form-control form-sm" placeholder="entrez votre mot de passe" required onkeyup="veriformPassword(this);" onblur="fermeboite(veriformPassword(this));">
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <input type="password" name="passwordc" id="p2G" class="md-form md-outline form-control form-sm" placeholder="confirmez votre mot de passe" required  onkeyup="veriformPasswordC(this,'#p1G')" onblur="fermeboite(veriformPasswordC(this,'#p1G'));">
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <input type="reset"  value="réinitialiser">
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <input type="submit" value="soumettre">
+                                </div>
+                            </div>
+                        </form>
+                  </div>
+              </div>
+           </div>
+    </div>
+   <!-- fin -->
+   <!--- footer -->
+   <div class="footer_contain">
+   <footer id="footer" class="container">
+       <!--premiere partie -->
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <h6 class="heading1"><span>E</span>asyFood</h6>
+      <nav>
+        <ul class="nospace">
+          <li><a href="#"><i class="fa fa-lg fa-home"></i></a></li>
+          <li><a href="#">A propos</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Termes</a></li>
+          <li><a href="#">Privé</a></li>
+          <li><a href="#">Cookies</a></li>
+          <li><a href="#">boutique en ligne</a></li>
+          <li><a href="#">carte du site</a></li>
+        </ul>
+      </nav>
+      <ul class="faico clear">
+        <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
+        <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+        <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
+      </ul>
+    </div>
+    <!-- deuxième partie -->
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+      <h6 class="heading">Location</h6>
+      <ul class="nospace linklist contact">
+        <li><i class="fa fa-map-marker"></i>
+          <address>
+          cocody angré, Abidjan
+          </address>
+        </li>
+        <li><i class="fa fa-phone"></i> +225 671 635 47/+225</li>
+        <li><i class="fa fa-envelope-o"></i> info@agromarket.com</li>
+      </ul>
+    </div>
+    <!-- troisième partie -->
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+      <h6 class="heading">Nos nouvelles</h6>
+      <form method="post" action="#">
+        <fieldset>
+          <legend>Newsletter:</legend>
+          <input class="btmspace-15" type="text" value="" placeholder="Name">
+          <input class="btmspace-15" type="text" value="" placeholder="Email">
+          <button type="submit" value="submit">Envoyer</button>
+        </fieldset>
+      </form>
+    </div>
+  </footer>
+    </div>
+    {% if success %}
+    <div class="modal fade" id="success">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3><span class="fa fa-check-circle"></span> inscription réussi</h3>
+                </div>
+                <div class="modal-body">
+                    <p>vous êtes désormais inscrit sur notre plateforme.<br>Merci de vous connectez pour avoir accès a votre compte</p><br>
+                    <a href="connexion" class="btn btn-success">je me connecte</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('#success').modal('show');
+        });
+    </script>
+{% endif %}
+    <!-- fin footer -->
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="../public/bootstrap/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="../public/bootstrap/js/mdb.min.js"></script>
+  <script src="../public/bootstrap/js/animate.js"></script>
+  <script src="../public/bootstrap/js/fonctions.js"></script>
+</body>
+
+</html>
